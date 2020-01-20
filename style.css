@@ -49,6 +49,20 @@ h1 {
   top: 1px;
 }
 
+.footer p {
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 3rem;
+  font-size: 0.7rem;
+}
+
+.footer a {
+  color: #1a5ee7;
+  text-decoration: none;
+  margin-top: 3rem;
+  font-size: 0.7rem;
+}
+
 .game-site {
   background-color: #ffffff;
 }
