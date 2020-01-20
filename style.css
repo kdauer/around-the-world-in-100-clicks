@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis&display=swap");
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Dosis", "sans-serif";
+}
+
+.start {
+  background-color: #000000;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #ffffff;
+  padding-bottom: 2rem;
+}
+
+.intro {
+  color: #ffffff;
+  margin: 2rem;
+}
+
+.Button {
+  background-color: #1ac5e7;
+  border-radius: 19px;
+  border: 1px solid #3c1ae7;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 12px 20px;
+  text-decoration: none;
+  margin: 3.35rem;
+}
+.Button:hover {
+  background-color: #1a5ee7;
+}
+.Button:active {
+  position: relative;
+  top: 1px;
+}
+
+.game-site {
+  background-color: #ffffff;
+}
