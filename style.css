@@ -65,4 +65,90 @@ h1 {
 
 .game-site {
   background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #c9c9c9;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#title {
+  font-size: 2rem;
+}
+
+.header p > a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 0;
+  text-decoration: none;
+}
+
+.box {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  margin: 0.25rem;
+  background-color: #ffffff;
+}
+
+.box p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.img-border {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  background-color: rgb(251, 251, 251);
+}
+
+.img-border img {
+  max-width: 50%;
+  max-height: 50%;
+  padding: 0.5rem;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#input-field {
+  font-size: 2rem;
+  border: 1px solid #000000;
+}
+
+.submit {
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  font-family: "Dosis, sans-serif";
+  border: 1px solid #000000;
+  background-color: #2ba8ff;
+}
+
+.hint {
+  display: flex;
+  justify-content: center;
 }
