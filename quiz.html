@@ -9,12 +9,16 @@
   </head>
   <body class="game-site">
     <div class="header">
-      <p id="title"><a href="index.html">Back to Start</a></p>
+      <p id="title"><a href="index.html">Home</a></p>
       <div class="box">
         <p>Round:</p>
         <p id="round"><span>1</span> out of 10</p>
       </div>
       <p id="title">What country is behind this shape?</p>
+      <div class="box">
+        <p>Guesses</p>
+        <p id="guesses"><span>1</span>/3</p>
+      </div>
       <div class="box">
         <p>Score:</p>
         <p id="score">0</p>
@@ -22,18 +26,20 @@
     </div>
     <div class="game-container">
       <div class="img-border">
-        <img src="assets/images/Albania.jpg" alt="" />
+        <img src="#" alt="" />
       </div>
     </div>
     <div class="input">
       <input type="text" name="Here goes the country" id="input-field" />
-      <button class="submit">Guess</button>
+      <div class="next">
+        <button>Next Round</button>
+      </div>
     </div>
     <div class="hint">
-      <p>The country has <span>'0 '</span>letters</p>
+      <p>The country has <span>0</span>letters</p>
     </div>
-    <script src="countries.js"></script>
-    <script src="functions.js"></script>
-    <script src="game.js"></script>
+    <script src="src/countries.js"></script>
+    <script src="src/functions.js"></script>
+    <script src="src/game.js"></script>
   </body>
 </html>
