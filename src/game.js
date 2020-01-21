@@ -56,6 +56,15 @@ function finalResult() {
   document.querySelector("#final-score").innerText = status.score;
 }
 
+function displaySolution() {
+  document.querySelector("#europe").src = chosenCountry.solution;
+  let europeBox = document.querySelector(".image-europe-box");
+  europeBox.style.display = "block";
+  setTimeout(function() {
+    europeBox.style.display = "none";
+  }, 2500);
+}
+
 function checkCountry(userInput) {
   let countryAnswer = chosenCountry.answers.map(function(element) {
     return element.toLowerCase();
@@ -68,9 +77,9 @@ function checkCountry(userInput) {
     messageBox.style.display = "block";
     setTimeout(function() {
       messageBox.style.display = "none";
-    }, 1000);
+    }, 500);
     status.score += 100;
-    if (status.roundsCount >= 3) {
+    if (status.roundsCount >= 1) {
       finalResult();
       return;
     }
@@ -78,6 +87,7 @@ function checkCountry(userInput) {
     document.getElementById("input-field").value = "";
     CalculateScore();
     CalculateRounds();
+    displaySolution();
     displayCountry();
   } else {
     status.guessesLeft -= 1;
@@ -86,18 +96,26 @@ function checkCountry(userInput) {
     messageBox.style.display = "block";
     setTimeout(function() {
       messageBox.style.display = "none";
-    }, 1000);
+    }, 500);
     console.log("user input does not match");
     CalculateGuessesLeft();
     if (status.guessesLeft < 1) {
       document.querySelector(".message-box ").style.color = "black";
       document.querySelector(".message-box ").innerHTML =
         "It was " + chosenCountry.name;
+      messageBox.style.display = "block";
+      setTimeout(function() {
+        messageBox.style.display = "none";
+      }, 500);
       status.roundsCount += 1;
+      if (status.roundsCount >= 1) {
+        finalResult();
+        return;
+      }
       status.guessesLeft = guesses;
       CalculateRounds();
       CalculateGuessesLeft();
-
+      displaySolution();
       displayCountry();
     }
     document.getElementById("input-field").value = "";
@@ -111,18 +129,4 @@ document.getElementById("input-field").onkeypress = function(key) {
     let userInput = document.getElementById("input-field").value.toLowerCase();
     checkCountry(userInput);
   }
-};
-
-displayMessageBox = result => {
-  console.log(result);
-  const images = result ? successImages : failureImages;
-  console.log(images);
-  const messageBox = document.querySelector(".message-box");
-  messageBox.style.backgroundImage = `url(./assets/${
-    images[Math.floor(Math.random() * images.length)]
-  })`;
-  messageBox.style.display = "block";
-  setTimeout(() => {
-    messageBox.style.display = "none";
-  }, durationMessageBox);
 };
