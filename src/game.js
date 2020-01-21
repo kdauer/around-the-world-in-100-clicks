@@ -34,7 +34,6 @@ function finalResult() {
         <div class="end">
           <p>Play often and join the Country Club</p>
           <div class="final-image">
-            <img class="globe" src="assets/result/globe.svg" alt="globe" />
           </div>
         </div>
         <a href="quiz.html" class="Start">
@@ -91,10 +90,12 @@ function checkCountry(userInput) {
     console.log("user input does not match");
     CalculateGuessesLeft();
     if (status.guessesLeft < 1) {
-      document.querySelector(".message-box ").innerHTML = chosenCountry.name;
+      document.querySelector(".message-box ").style.color = "black";
+      document.querySelector(".message-box ").innerHTML =
+        "It was " + chosenCountry.name;
       status.roundsCount += 1;
-      CalculateRounds();
       status.guessesLeft = guesses;
+      CalculateRounds();
       CalculateGuessesLeft();
 
       displayCountry();

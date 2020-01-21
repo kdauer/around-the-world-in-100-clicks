@@ -125,6 +125,10 @@ h1 {
 }
 
 .game-container {
+  background-image: url("assets/game-background/world-top-view.svg");
+  color: #000000;
+  background-size: cover;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,7 +188,10 @@ h1 {
 }
 
 .final-image {
+  background-image: url("assets/result/globe.svg");
   color: #ffffff;
+  background-size: cover;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   width: 300px;
