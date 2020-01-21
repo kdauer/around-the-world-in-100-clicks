@@ -1,4 +1,4 @@
-let rounds = 0;
+let rounds = 1;
 let guesses = 3;
 
 let status = {
@@ -11,52 +11,56 @@ function renderGame() {
   CalculateScore();
   CalculateGuessesLeft();
   CalculateRounds();
+  nextRoundButton();
 }
 
 function CalculateScore() {
-  document.querySelector("#score").innerHTML = status.score;
+  document.querySelector("#score").innerText = status.score;
 }
 
 function CalculateGuessesLeft() {
-  document.querySelector("#guesses span").innerHTML = status.guessesLeft;
+  document.querySelector("#guesses span").innerText = status.guessesLeft;
 }
 function CalculateRounds() {
-  document.querySelector("#rounds span").innerHTML = status.roundsCount;
+  document.querySelector("#round span").innerText = status.roundsCount;
 }
-
-function nextRoundButton() {
-  if (status.guessesLeft === 0 && status.roundsCount < 10) {
-    document.querySelector(".next").style.display = "block";
-  }
-}
-
 function finalResult() {}
 
-let userInput = document.querySelector("#input-field").value.toLowerCase();
-
 function checkCountry(userInput) {
-  if (userInput === chosenCountry.answers[""]) {
-    score += 100;
+  let countryAnswer = chosenCountry.answers.map(function(element) {
+    return element.toLowerCase();
+  });
+  if (countryAnswer.includes(userInput)) {
+    //If answer matches
+    console.log(countryAnswer);
+    console.log(userInput);
+    status.score += 100;
+    status.roundsCount += 1;
+    document.getElementById("input-field").value = "";
+    CalculateScore();
+    CalculateRounds();
     displayCountry();
-    console.log(score);
-  } else if (rounds === 10) {
+  } else if (status.roundsCount === 10) {
     finalResult();
   } else {
-    guesses -= 1;
-    console.log(guesses);
-    if (guesses === 0) {
-      rounds += 1;
-      console.log(rounds);
+    status.guessesLeft -= 1;
+    console.log("user input does not match");
+    if (status.guessesLeft === 0) {
+      status.roundsCount += 1;
+      status.guessesLeft = guesses;
       displayCountry();
     }
+    document.getElementById("input-field").value = "";
   }
   console.log(userInput);
-  document.getElementById("input-field").value = "";
+
   renderGame();
 }
 
+// press enter for input
 document.getElementById("input-field").onkeypress = function(key) {
   if (key.keyCode === 13) {
+    let userInput = document.getElementById("input-field").value;
     checkCountry(userInput);
   }
 };

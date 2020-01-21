@@ -122,37 +122,39 @@ h1 {
 .img-border {
   display: flex;
   justify-content: center;
-  width: 50vw;
+  width: 300px;
+  height: 300px;
   border: 3px solid #000000;
   border-radius: 10px;
   background-color: rgb(251, 251, 251);
 }
 
 .img-border img {
-  max-width: 50%;
-  max-height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  width: 100%;
   padding: 0.5rem;
+}
+
+.instruction {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .input {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
 }
 
 #input-field {
   font-size: 2rem;
   border: 1px solid #000000;
-}
-
-.next button {
-  display: none;
-  margin-left: 2rem;
-  font-size: 1.5rem;
-  font-family: "Dosis, sans-serif";
-  border: 1px solid #000000;
-  background-color: #2ba8ff;
 }
 
 .hint {
