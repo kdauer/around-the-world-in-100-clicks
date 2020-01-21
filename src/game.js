@@ -1,10 +1,10 @@
 let rounds = 0;
-let guesses = 1;
+let guesses = 3;
 
 let status = {
   score: 0,
   guessesLeft: guesses,
-  roundsLeft: rounds
+  roundsCount: rounds
 };
 
 function renderGame() {
@@ -21,34 +21,38 @@ function CalculateGuessesLeft() {
   document.querySelector("#guesses span").innerHTML = status.guessesLeft;
 }
 function CalculateRounds() {
-  document.querySelector("#rounds span").innerHTML = status.roundsLeft;
+  document.querySelector("#rounds span").innerHTML = status.roundsCount;
 }
 
-function nextRound() {
-  if (status.guessesLeft === 0 && status.roundsLeft > 0) {
+function nextRoundButton() {
+  if (status.guessesLeft === 0 && status.roundsCount < 10) {
     document.querySelector(".next").style.display = "block";
   }
 }
 
+function finalResult() {}
+
 let userInput = document.querySelector("#input-field").value.toLowerCase();
 
 function checkCountry(userInput) {
-  if (userInput === chosenCountry.answers) {
+  if (userInput === chosenCountry.answers[""]) {
     score += 100;
-    renderGame();
     displayCountry();
+    console.log(score);
   } else if (rounds === 10) {
-    renderGame();
-    displayCountry();
+    finalResult();
   } else {
-    guesses += 1;
-    if (guesses === 3) {
+    guesses -= 1;
+    console.log(guesses);
+    if (guesses === 0) {
       rounds += 1;
-      renderGame();
+      console.log(rounds);
       displayCountry();
     }
   }
+  console.log(userInput);
   document.getElementById("input-field").value = "";
+  renderGame();
 }
 
 document.getElementById("input-field").onkeypress = function(key) {
