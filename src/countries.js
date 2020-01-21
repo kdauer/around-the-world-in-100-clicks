@@ -216,7 +216,3 @@ const countries = [
     name: "Slovenia"
   }
 ];
-
-wrongTag = ["No", "Nope"];
-
-rightTag = ["Yes", "Awesome"];
