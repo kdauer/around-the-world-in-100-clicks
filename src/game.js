@@ -49,6 +49,8 @@ function finalResult() {
           </p>
         </div>
       </div>
+      <div class="footer-line">
+      </div>
     </body>`;
   const resultNode = document.createElement("div");
   resultNode.innerHTML = results;
@@ -79,7 +81,7 @@ function checkCountry(userInput) {
       messageBox.style.display = "none";
     }, 500);
     status.score += 100;
-    if (status.roundsCount >= 1) {
+    if (status.roundsCount >= 3) {
       finalResult();
       return;
     }
@@ -108,7 +110,7 @@ function checkCountry(userInput) {
         messageBox.style.display = "none";
       }, 500);
       status.roundsCount += 1;
-      if (status.roundsCount >= 1) {
+      if (status.roundsCount >= 3) {
         finalResult();
         return;
       }
