@@ -110,7 +110,7 @@ function checkCountry(userInput) {
     console.log("user input does not match");
     CalculateGuessesLeft();
     if (status.guessesLeft < 1) {
-      document.querySelector(".message-box ").style.color = "black";
+      document.querySelector(".message-box ").style.color = "blue";
       document.querySelector(".message-box ").innerHTML =
         "It was " + chosenCountry.name;
       messageBox.style.display = "block";

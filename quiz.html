@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Country Quiz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -27,13 +31,15 @@
     </div>
 
     <div class="game-container">
-      <div class="image-europe-box">
+      <div class="image-europe-box animated fadeIn duration-1s">
         <img id="europe" src="#" alt="" />
       </div>
-      <div class="message-box"></div>
+      <!--- displays the country on a map of europe --->
       <div class="img-border">
         <img src="#" alt="" />
       </div>
+      <!--- message if right or wrong --->
+      <div class="message-box animated heartBeat"></div>
     </div>
     <div class="instruction">
       <p>type your guess and press "Enter" to check</p>
@@ -47,7 +53,7 @@
       />
     </div>
     <div class="hint">
-      <p>The country has <span>0</span>letters</p>
+      <p>The country has <span>0</span>&nbsp;letters</p>
     </div>
     <script src="src/countries.js"></script>
     <script src="src/functions.js"></script>

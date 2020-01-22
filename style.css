@@ -11,6 +11,7 @@ body {
   font-family: "Dosis", "sans-serif";
 }
 /* Intro Page styling */
+/* body class */
 .start {
   background-color: #000000;
   height: 100%;
@@ -35,6 +36,7 @@ h1 {
   margin: 2rem;
 }
 
+/* Start Button */
 .Start {
   background-color: #1ac5e7;
   border-radius: 19px;
@@ -107,7 +109,6 @@ h1 {
   display: none;
   position: fixed;
   padding: 2rem;
-  background-color: #ffffff;
 }
 
 .image-europe-box {
