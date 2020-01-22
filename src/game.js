@@ -28,7 +28,7 @@ function finalResult() {
   const results = `
       <div class="container">
         <h1>
-          Well done! You got a final score of <span id="final-score">0</span>points!
+          Well done! You got a final score of <span id="final-score">&nbsp;0</span>&nbsp;points!
         </h1>
 
         <div class="end">
@@ -42,7 +42,7 @@ function finalResult() {
         <div class="footer-results">
           <p>
             Made by
-            <a href="https://www.linkedin.com/in/konstantin-dauer-12313a1a0/">
+            <a href="https://www.linkedin.com/in/konstantindauer/">
               Konstantin Dauer
             </a>
             during Ironhack Bootcamp January 2020
@@ -50,7 +50,7 @@ function finalResult() {
         </div>
       </div>
       `;
-  //   </body>
+
   const resultNode = document.createElement("div");
   resultNode.innerHTML = results;
   document.querySelector(".game-site").replaceWith(resultNode);
@@ -81,7 +81,7 @@ function checkCountry(userInput) {
     }, 500);
     status.score += 100;
     displaySolution();
-    if (status.roundsCount >= 3) {
+    if (status.roundsCount >= 10) {
       messageBox.style.display = "block";
       setTimeout(function() {
         messageBox.style.display = "none";
@@ -94,6 +94,8 @@ function checkCountry(userInput) {
     }
     status.roundsCount += 1;
     document.getElementById("input-field").value = "";
+    status.guessesLeft = guesses;
+    CalculateGuessesLeft();
     CalculateScore();
     CalculateRounds();
     displayCountry();
@@ -117,7 +119,7 @@ function checkCountry(userInput) {
       }, 500);
       displaySolution();
       status.roundsCount += 1;
-      if (status.roundsCount >= 3) {
+      if (status.roundsCount >= 10) {
         messageBox.style.display = "block";
         setTimeout(function() {
           messageBox.style.display = "none";

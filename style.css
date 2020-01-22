@@ -10,7 +10,7 @@ html {
 body {
   font-family: "Dosis", "sans-serif";
 }
-
+/* Intro Page styling */
 .start {
   background-color: #000000;
   height: 100%;
@@ -67,7 +67,7 @@ h1 {
   margin-top: 3rem;
   font-size: 0.7rem;
 }
-
+/* Game Styles */
 .game-site {
   background-color: #ffffff;
   margin: 0;
@@ -111,8 +111,8 @@ h1 {
 }
 
 .image-europe-box {
-  width: 400px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
   display: none;
   position: absolute;
 }
@@ -153,8 +153,8 @@ h1 {
 .img-border {
   display: flex;
   justify-content: center;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   border: 3px solid #000000;
   border-radius: 10px;
   background-color: rgb(251, 251, 251);
@@ -196,6 +196,7 @@ h1 {
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
+/* Styles result page */
 .end {
   color: #ffffff;
   display: flex;
