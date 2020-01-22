@@ -109,11 +109,12 @@ h1 {
   display: none;
   position: fixed;
   padding: 2rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .image-europe-box {
-  width: 600px;
-  height: 600px;
+  width: 750px;
+  height: 750px;
   display: none;
   position: absolute;
 }

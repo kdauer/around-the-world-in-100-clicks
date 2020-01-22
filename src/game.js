@@ -7,6 +7,8 @@ let status = {
   roundsCount: rounds
 };
 
+let messageBox = document.querySelector(".message-box");
+
 function renderGame() {
   CalculateScore();
   CalculateGuessesLeft();
@@ -57,35 +59,62 @@ function finalResult() {
   document.querySelector("#final-score").innerText = status.score;
 }
 
+function wrongAnswer() {
+  messageBox.style.color = "red";
+  messageBox.innerHTML = "Not Exactly";
+  messageBox.style.display = "block";
+  messageBox.classList.add("animated", "wobble", "slow");
+  setTimeout(function() {
+    messageBox.classList.remove("animated", "wobble", "slow");
+    messageBox.style.display = "none";
+  }, 2000);
+  console.log("user input does not match");
+}
+
+function rightAnswer() {
+  messageBox.style.color = "green";
+  messageBox.innerHTML = "Awesome";
+  messageBox.style.display = "block";
+  messageBox.classList.add("animated", "heartBeat", "slow");
+  setTimeout(function() {
+    messageBox.classList.remove("animated", "heartBeat", "slow");
+    messageBox.style.display = "none";
+  }, 2000);
+}
+
+function displayRightName() {
+  messageBox.classList.add("animated", "tada");
+  messageBox.style.color = "blue";
+  messageBox.innerHTML = "It was " + chosenCountry.name;
+  messageBox.style.display = "block";
+  setTimeout(function() {
+    messageBox.classList.remove("animated", "tada");
+    messageBox.style.display = "none";
+  }, 2000);
+}
+
 function displaySolution() {
   document.querySelector("#europe").src = chosenCountry.solution;
   let europeBox = document.querySelector(".image-europe-box");
   europeBox.style.display = "block";
   setTimeout(function() {
     europeBox.style.display = "none";
-  }, 2500);
+  }, 3000);
 }
 
 function checkCountry(userInput) {
   let countryAnswer = chosenCountry.answers.map(function(element) {
     return element.toLowerCase();
   });
-  let messageBox = document.querySelector(".message-box");
-
   if (countryAnswer.includes(userInput)) {
-    document.querySelector(".message-box ").style.color = "green";
-    document.querySelector(".message-box ").innerHTML = "Awesome";
-    messageBox.style.display = "block";
-    setTimeout(function() {
-      messageBox.style.display = "none";
-    }, 500);
+    rightAnswer();
     status.score += 100;
     displaySolution();
     if (status.roundsCount >= 10) {
-      messageBox.style.display = "block";
-      setTimeout(function() {
-        messageBox.style.display = "none";
-      }, 500);
+      //   messageBox.style.display = "block";
+      //   setTimeout(function() {
+      //     messageBox.style.display = "none";
+      //   }, 500);
       displaySolution();
       setTimeout(function() {
         finalResult();
@@ -100,41 +129,28 @@ function checkCountry(userInput) {
     CalculateRounds();
     displayCountry();
   } else {
-    status.guessesLeft -= 1;
-    document.querySelector(".message-box ").style.color = "red";
-    document.querySelector(".message-box ").innerHTML = "Not Exactly";
-    messageBox.style.display = "block";
-    setTimeout(function() {
-      messageBox.style.display = "none";
-    }, 500);
-    console.log("user input does not match");
-    CalculateGuessesLeft();
-    if (status.guessesLeft < 1) {
-      document.querySelector(".message-box ").style.color = "blue";
-      document.querySelector(".message-box ").innerHTML =
-        "It was " + chosenCountry.name;
-      messageBox.style.display = "block";
-      setTimeout(function() {
-        messageBox.style.display = "none";
-      }, 500);
+    if (status.guessesLeft <= 1) {
+      console.log("less than 1 guess left", status.guessesLeft);
+      displayRightName();
       displaySolution();
       status.roundsCount += 1;
       if (status.roundsCount >= 10) {
-        messageBox.style.display = "block";
-        setTimeout(function() {
-          messageBox.style.display = "none";
-        }, 500);
         displaySolution();
         setTimeout(function() {
           finalResult();
-        }, 1000);
+        }, 3500);
         return;
       }
       status.guessesLeft = guesses;
+      document.getElementById("input-field").value = "";
       CalculateRounds();
       CalculateGuessesLeft();
       displayCountry();
+      return;
     }
+    status.guessesLeft -= 1;
+    wrongAnswer();
+    CalculateGuessesLeft();
     document.getElementById("input-field").value = "";
   }
   console.log(userInput);
