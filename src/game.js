@@ -24,8 +24,8 @@ function CalculateRounds() {
   document.querySelector("#round span").innerText = status.roundsCount;
 }
 function finalResult() {
+  // <body class="start">
   const results = `
-    <body class="start">
       <div class="container">
         <h1>
           Well done! You got a final score of <span id="final-score">0</span>points!
@@ -49,9 +49,8 @@ function finalResult() {
           </p>
         </div>
       </div>
-      <div class="footer-line">
-      </div>
-    </body>`;
+      `;
+  //   </body>
   const resultNode = document.createElement("div");
   resultNode.innerHTML = results;
   document.querySelector(".game-site").replaceWith(resultNode);
@@ -81,20 +80,27 @@ function checkCountry(userInput) {
       messageBox.style.display = "none";
     }, 500);
     status.score += 100;
+    displaySolution();
     if (status.roundsCount >= 3) {
-      finalResult();
+      messageBox.style.display = "block";
+      setTimeout(function() {
+        messageBox.style.display = "none";
+      }, 500);
+      displaySolution();
+      setTimeout(function() {
+        finalResult();
+      }, 1000);
       return;
     }
     status.roundsCount += 1;
     document.getElementById("input-field").value = "";
     CalculateScore();
     CalculateRounds();
-    displaySolution();
     displayCountry();
   } else {
     status.guessesLeft -= 1;
     document.querySelector(".message-box ").style.color = "red";
-    document.querySelector(".message-box ").innerHTML = "Nope";
+    document.querySelector(".message-box ").innerHTML = "Not Exactly";
     messageBox.style.display = "block";
     setTimeout(function() {
       messageBox.style.display = "none";
@@ -109,15 +115,22 @@ function checkCountry(userInput) {
       setTimeout(function() {
         messageBox.style.display = "none";
       }, 500);
+      displaySolution();
       status.roundsCount += 1;
       if (status.roundsCount >= 3) {
-        finalResult();
+        messageBox.style.display = "block";
+        setTimeout(function() {
+          messageBox.style.display = "none";
+        }, 500);
+        displaySolution();
+        setTimeout(function() {
+          finalResult();
+        }, 1000);
         return;
       }
       status.guessesLeft = guesses;
       CalculateRounds();
       CalculateGuessesLeft();
-      displaySolution();
       displayCountry();
     }
     document.getElementById("input-field").value = "";
