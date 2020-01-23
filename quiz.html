@@ -23,9 +23,9 @@
         <p id="title">What country is behind this shape?</p>
         <p class="description">
           You can guess 3 times <br />then you will be presented with the
-          solution
+          solution and some information
           <br />
-          and you will move on to the next round
+          and you can click on 'Next round'
         </p>
       </div>
 
@@ -51,7 +51,18 @@
       <div class="message-box"></div>
       <!--- hint for direction after first guess wrong --->
       <div class="direction-hint"></div>
+      <!-- button for the next round -->
       <button class="next-btn">Next Round</button>
+      <!-- an extra information -->
+      <div class="country-info">
+        <h3>here's some extra information</h3>
+        <p><span id="underline">capital:</span> <span id="capital"></span></p>
+        <p><span id="underline">population</span id="underline">: ~&nbsp;<span id="population"></span></p>
+        <p>
+          <span id="underline">fun fact:</span>
+          <span id="fact"></span>
+        </p>
+      </div>
     </div>
     <div class="instruction">
       <p>type your guess and press "Enter" to check</p>

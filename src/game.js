@@ -15,6 +15,8 @@ let messageBox = document.querySelector(".message-box");
 let hintDirection = document.querySelector(".direction-hint");
 // declare the next round button
 let nxtBtn = document.querySelector(".next-btn");
+// declare info-box
+let infoBox = document.querySelector(".country-info");
 
 function renderGame() {
   CalculateScore();
@@ -119,9 +121,15 @@ function displaySolution() {
   document.querySelector("#europe").src = chosenCountry.solution;
   let europeBox = document.querySelector(".image-europe-box");
   europeBox.style.display = "block";
-  //   setTimeout(function() {
-  //     europeBox.style.display = "none";
-  //   }, 3000);
+}
+
+// get content for info box and display it
+function displayInfoBox() {
+  document.getElementById("capital").innerHTML = chosenCountry.capital;
+  document.getElementById("population").innerHTML = chosenCountry.population;
+  document.getElementById("fact").innerHTML = chosenCountry.funFact;
+  infoBox.classList.add("animated", "slideInLeft", "slow");
+  infoBox.style.display = "block";
 }
 
 // show the next button
@@ -134,8 +142,7 @@ function showNxtBtn() {
 function clickNext() {
   renderGame();
   displayCountry();
-  //europeBox = document.querySelector(".image-europe-box");
-  console.log(document.querySelector(".image-europe-box"));
+  infoBox.style.display = "none";
   document.querySelector(".image-europe-box").style.display = "none";
   nxtBtn.style.display = "none";
   hintDirection.style.display = "none";
@@ -152,23 +159,20 @@ function checkCountry(userInput) {
     status.score += 100;
     displaySolution();
     hintDirection.style.display = "none";
+    displayInfoBox();
     showNxtBtn();
     if (status.roundsCount >= 10) {
       // after last round
       displaySolution();
+      nxtBtn.style.display = "none";
       setTimeout(function() {
         finalResult();
-      }, 1000);
+      }, 3500);
       return;
     }
     status.roundsCount += 1;
     document.getElementById("input-field").value = "";
     status.guessesLeft = guesses;
-    // clickNext();
-    // CalculateGuessesLeft();
-    // CalculateScore();
-    // CalculateRounds();
-    // displayCountry();
   } else {
     // answer is wrong
     if (status.guessesLeft <= 1) {
@@ -177,12 +181,14 @@ function checkCountry(userInput) {
       hintDirection.style.display = "none";
       displayRightName();
       displaySolution();
+      displayInfoBox();
       hintDirection.style.display = "none";
       showNxtBtn();
       status.roundsCount += 1;
       if (status.roundsCount >= 10) {
         // and also after last round
         displaySolution();
+        nxtBtn.style.display = "none";
         setTimeout(function() {
           finalResult();
         }, 3500);
@@ -190,10 +196,6 @@ function checkCountry(userInput) {
       }
       status.guessesLeft = guesses;
       document.getElementById("input-field").value = "";
-      //   clickNext();
-      //   CalculateRounds();
-      //   CalculateGuessesLeft();
-      //   displayCountry();
       return;
     }
     status.guessesLeft -= 1;
@@ -217,6 +219,5 @@ document.getElementById("input-field").onkeypress = function(key) {
 
 // create click event
 nxtBtn.onclick = function() {
-  console.log("hello moto");
   clickNext();
 };
