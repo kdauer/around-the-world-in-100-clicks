@@ -148,13 +148,10 @@ function checkCountry(userInput) {
     displayCountry();
   } else {
     // answer is wrong
-    // if (status.guessesLeft == 2) {
-    //   secondHint();
-    //   return;
-    // }
     if (status.guessesLeft <= 1) {
       // and no guesses left
       console.log("less than 1 guess left", status.guessesLeft);
+      hintDirection.style.display = "none";
       displayRightName();
       displaySolution();
       status.roundsCount += 1;
@@ -175,6 +172,10 @@ function checkCountry(userInput) {
     }
     status.guessesLeft -= 1;
     wrongAnswer();
+    if (status.guessesLeft == 2) {
+      // get the second hint
+      secondHint();
+    }
     CalculateGuessesLeft();
     document.getElementById("input-field").value = "";
   }
