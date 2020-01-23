@@ -139,8 +139,8 @@ function showNxtBtn() {
 
 // click "Next Round" button
 function clickNext() {
-  renderGame();
   displayCountry();
+  renderGame();
   document.getElementById("input-field").disabled = false;
   document.getElementById("input-field").focus();
   infoBox.style.display = "none";
@@ -170,7 +170,7 @@ function checkCountry(userInput) {
       nxtBtn.style.display = "none";
       setTimeout(function() {
         finalResult();
-      }, 3500);
+      }, 5000);
       return;
     }
     status.roundsCount += 1;
@@ -182,7 +182,6 @@ function checkCountry(userInput) {
     if (status.guessesLeft <= 1) {
       // and no guesses left
       CalculateGuessesLeft();
-      console.log("less than 1 guess left", status.guessesLeft);
       hintDirection.style.display = "none";
       displayRightName();
       displaySolution();
@@ -198,7 +197,7 @@ function checkCountry(userInput) {
         nxtBtn.style.display = "none";
         setTimeout(function() {
           finalResult();
-        }, 3500);
+        }, 5000);
         return;
       }
       status.guessesLeft = guesses;

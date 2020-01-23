@@ -12,7 +12,6 @@ let chosenCountry;
 //show the image
 function displayCountry() {
   chosenCountry = getRandomCountry();
-  console.log(chosenCountry);
   document.querySelector(".img-border img").src = chosenCountry.path;
   setCountryHint();
 }
