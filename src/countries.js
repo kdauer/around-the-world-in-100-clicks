@@ -6,8 +6,8 @@ const countries = [
     name: "Albania",
     direction: "South",
     capital: "Tirana",
-    population: "",
-    funFact: ""
+    population: "2.900.000",
+    funFact: "Here you nod for 'no' and shake your head for 'yes'."
   },
   {
     path: "assets/images/Bosnia Herzegovina.jpg",
@@ -21,8 +21,9 @@ const countries = [
     name: "Bosnia Herzegovina",
     direction: "South",
     capital: "Sarajevo",
-    population: "",
-    funFact: ""
+    population: "3.300.000",
+    funFact:
+      "The country is nicknamed the 'Heart Shaped Land' due to the country’s slight heart shape."
   },
   {
     path: "assets/images/Estonia.jpg",
@@ -31,8 +32,9 @@ const countries = [
     name: "Estonia",
     direction: "North",
     capital: "Tallinn",
-    population: "",
-    funFact: ""
+    population: "1.300.000",
+    funFact:
+      "Estonia has the most meteorite craters in the world, measured by land mass. One of the most spectacular is the one on the island of Saarema. About 7500 years ago, a meteorite shattered there at an altitude of about five to ten kilometres, raining many small pieces of it down on the earth. The largest one left a 20 meter deep hole, the Kaali Crater"
   },
   {
     path: "assets/images/Hungary.jpg",
@@ -41,8 +43,9 @@ const countries = [
     name: "Hungary",
     direction: "East",
     capital: "Budapest",
-    population: "",
-    funFact: ""
+    population: "9.600.000",
+    funFact:
+      "Notable inventions include the Rubik's Cube (by sculptor and professor Erno Rubik, 1974), the krypton electric bulb (by physicist Imre Brody in 1937), and the biro, patented in 1938 by journalist László Bíró."
   },
   {
     path: "assets/images/Luxembourg.jpg",
@@ -51,8 +54,9 @@ const countries = [
     name: "Luxembourg",
     direction: "West",
     capital: "Luxembourg",
-    population: "",
-    funFact: ""
+    population: "600.000",
+    funFact:
+      "Luxembourg is the only Grand Duchy in the world. So instead of a King and Queen, they have a Grand-Duke and Grand-Duchess."
   },
   {
     path: "assets/images/Poland.jpg",
@@ -61,8 +65,9 @@ const countries = [
     name: "Poland",
     direction: "East",
     capital: "Warsaw",
-    population: "",
-    funFact: ""
+    population: "37.800.000",
+    funFact:
+      "College in Poland is free. If you’re a Polish citizen, you can attend a state-run university without paying tuition."
   },
   {
     path: "assets/images/Spain.jpg",
@@ -71,8 +76,9 @@ const countries = [
     name: "Spain",
     direction: "South-West",
     capital: "Madrid",
-    population: "",
-    funFact: ""
+    population: "46.700.000",
+    funFact:
+      "The Plaza de la Puerta del Sol is not only supposed to be located exactly in the centre of Spain's capital Madrid - it is even considered as the centre of the whole country. On the square is the so-called Kilometro Cero, which is the traditional starting point of all six national roads"
   },
   {
     path: "assets/images/Armenia.jpg",
@@ -81,8 +87,9 @@ const countries = [
     name: "Armenia",
     direction: "East",
     capital: "Yerevan",
-    population: "",
-    funFact: ""
+    population: "2.900.000",
+    funFact:
+      "Chess is a compulsory subject in schools. Interesting huh? All students have to take chess as a compulsory subject in school and there are even exams for it!"
   },
   {
     path: "assets/images/Bulgaria.jpg",
@@ -91,8 +98,9 @@ const countries = [
     name: "Bulgaria",
     direction: "South-East",
     capital: "Sofia",
-    population: "",
-    funFact: ""
+    population: "6.900.000",
+    funFact:
+      "Lactobacillus Bulgaricus, the bacterium that is responsible for giving Bulgarian yoghurt its unique flavour and consistency, can be found only in Bulgarian air."
   },
   {
     path: "assets/images/Finland.jpg",
@@ -101,8 +109,9 @@ const countries = [
     name: "Finland",
     direction: "North-East",
     capital: "Helsinki",
-    population: "",
-    funFact: ""
+    population: "5.500.00",
+    funFact:
+      "The amount of the speeding ticket depends on the driver's income. This can result in five-figure amounts. There is also something else interesting in Finland: a heavy metal band for children, the Hevisaurus."
   },
   {
     path: "assets/images/Iceland.jpg",
@@ -111,8 +120,9 @@ const countries = [
     name: "Iceland",
     direction: "North-West",
     capital: "Reykjavik",
-    population: "",
-    funFact: ""
+    population: "300.000",
+    funFact:
+      "In Iceland there is an 'Elf Commissioner' who checks that no cultural property - for example an Elven home - is destroyed in the process. Very respectful!"
   },
   {
     path: "assets/images/Macedonia.jpg",
@@ -121,8 +131,9 @@ const countries = [
     name: "North Macedonia",
     direction: "South-East",
     capital: "Skopje",
-    population: "",
-    funFact: ""
+    population: "2.000.000",
+    funFact:
+      "In 2006, it became the first country in the world to have full access to a wireless broadband connection, after being a part of a high-tech project."
   },
   {
     path: "assets/images/Portugal.jpg",
@@ -131,8 +142,9 @@ const countries = [
     name: "Portugal",
     direction: "South-West",
     capital: "Lisbon",
-    population: "",
-    funFact: ""
+    population: "10.200.000",
+    funFact:
+      "The people of Porto have an old saying about the biggest cities in Portugal: 'Porto works, Coimbra studies, Braga prays and Lisbon plays'."
   },
   {
     path: "assets/images/Sweden.jpg",
@@ -141,8 +153,9 @@ const countries = [
     name: "Sweden",
     direction: "North",
     capital: "Stockholm",
-    population: "",
-    funFact: ""
+    population: "10.000.000",
+    funFact:
+      "In terms of population, more caravans are registered in Sweden than in the Netherlands."
   },
   {
     path: "assets/images/Austria.jpg",
@@ -151,8 +164,9 @@ const countries = [
     name: "Austria",
     direction: "West",
     capital: "Vienna",
-    population: "",
-    funFact: ""
+    population: "8.900.000",
+    funFact:
+      "In Vienna there is the Klink Academy. Aha. And what is that? A school that teaches people about sex. I mean, there's got to be some kind of a way to learn..."
   },
   {
     path: "assets/images/Croatia.jpg",
@@ -161,8 +175,9 @@ const countries = [
     name: "Croatia",
     direction: "South-West",
     capital: "Zagreb",
-    population: "",
-    funFact: ""
+    population: "4.100.000",
+    funFact:
+      "In Hvar the weather is so constant and good that some hotel owners offer free accommodation when it snows."
   },
   {
     path: "assets/images/France.jpg",
@@ -171,8 +186,9 @@ const countries = [
     name: "France",
     direction: "West",
     capital: "Paris",
-    population: "",
-    funFact: ""
+    population: "65.200.000",
+    funFact:
+      "In Paris there is only a stop sign, but there is also a Statue of Liberty and you can marry dead people and also the Eiffel Tower. Therefore you cannot call your pig Napoleon by law."
   },
   {
     path: "assets/images/Ireland.jpg",
@@ -181,8 +197,9 @@ const countries = [
     name: "Ireland",
     direction: "North-West",
     capital: "Dublin",
-    population: "",
-    funFact: ""
+    population: "4.900.000",
+    funFact:
+      "Windmills always turn counterclockwise - except in Ireland. Why? Nobody knows"
   },
   {
     path: "assets/images/Moldava.jpg",
@@ -191,8 +208,9 @@ const countries = [
     name: "Moldava",
     direction: "East",
     capital: "Chisinau",
-    population: "",
-    funFact: ""
+    population: "4.000.000",
+    funFact:
+      "It went nearly three years without a president. In 2012, after nearly three years of political deadlock, Moldova elected the veteran judge, Nicolae Timofti, as president – for the first time in 917 days, the country had a leader. "
   },
   {
     path: "assets/images/Romania.jpg",
@@ -201,8 +219,9 @@ const countries = [
     name: "Romania",
     direction: "East",
     capital: "Bucharest",
-    population: "",
-    funFact: ""
+    population: "19.200.000",
+    funFact:
+      "Here are officially the most beautiful waterfalls in the world: The Cascada Bigar Falls. In addition, you can also find the probably most colourful cemetery in this country."
   },
   {
     path: "assets/images/Switzerland.jpg",
@@ -211,8 +230,9 @@ const countries = [
     name: "Switzerland",
     direction: "West",
     capital: "Bern",
-    population: "",
-    funFact: ""
+    population: "8.600.000",
+    funFact:
+      "In Switzerland there is a 500-year-old statue that eats children: the Kindlifresserbrunnen."
   },
   {
     path: "assets/images/Azerbaijan.jpg",
@@ -221,8 +241,9 @@ const countries = [
     name: "Azerbaijan",
     direction: "East",
     capital: "Baku",
-    population: "",
-    funFact: ""
+    population: "10.100.000",
+    funFact:
+      "Azerbaijan has more mud volcanoes than any other country on Earth – more than 400. When its volcanoes erupt, the flames shoot up to a kilometre in the air, and when dormant they bubble and pop with noxious gases."
   },
   {
     path: "assets/images/Cyprus.jpg",
@@ -231,8 +252,9 @@ const countries = [
     name: "Cyprus",
     direction: "South-East",
     capital: "Nicosia",
-    population: "",
-    funFact: ""
+    population: "1.100.000",
+    funFact:
+      "The island country is divided into two parts.  36,2% of the sovereign territory of Cyprus is still under illegal military occupation by Turkey."
   },
   {
     path: "assets/images/Georgia.jpg",
@@ -242,7 +264,8 @@ const countries = [
     direction: "East",
     capital: "Tbilisi",
     population: "",
-    funFact: ""
+    funFact:
+      "Tbilisi – the capital of Georgia, got its name from the Old Georgian word ‘Tpili’ which means ‘warm’. The city also has one of the longest and steepest funiculars in the world to enjoy the breathtaking views of the city from the top of the hill."
   },
   {
     path: "assets/images/Italy.jpg",
@@ -251,8 +274,8 @@ const countries = [
     name: "Italy",
     direction: "South-West",
     capital: "Rome",
-    population: "",
-    funFact: ""
+    population: "60.500.000",
+    funFact: "Italy is the country with the most Unesco World Heritage Sites."
   },
   {
     path: "assets/images/Montenegro.jpg",
@@ -261,8 +284,9 @@ const countries = [
     name: "Montenegro",
     direction: "South",
     capital: "Podgorica",
-    population: "",
-    funFact: ""
+    population: "600.000",
+    funFact:
+      " Montenegro did not have its own currency, but initially the German Mark. When the euro was introduced, they had simply adopted the currency, even though they did not belong to the EU. Somehow nobody cared about that at that time."
   },
   {
     path: "assets/images/Russia.jpg",
@@ -271,8 +295,9 @@ const countries = [
     name: "Russia",
     direction: "North-East",
     capital: "Moscow",
-    population: "",
-    funFact: ""
+    population: "146.000.000",
+    funFact:
+      "In Russia, until it was strangely banned in 2012, there was a sex doll swimming race - the Bubble Baba Challenge: Up to 800 participants tried to cross the river on a floating sex doll. The only rule: to be at least 16 years old and to pass an - how could it be otherwise - alcohol test."
   },
   {
     path: "assets/images/Ukraine.jpg",
@@ -281,8 +306,8 @@ const countries = [
     name: "Ukraine",
     direction: "East",
     capital: "Kiev",
-    population: "",
-    funFact: ""
+    population: "43.800.000",
+    funFact: "There are 40 vodka producers in Ukraine."
   },
   {
     path: "assets/images/Belarus.jpg",
@@ -291,8 +316,9 @@ const countries = [
     name: "Belarus",
     direction: "North-East",
     capital: "Minsk",
-    population: "",
-    funFact: ""
+    population: "9.400.000",
+    funFact:
+      "Many Belarusian recipes contain vodka: if you gargle with it, you won't get a raw neck, if you wash your hair with it, no dandruff - and it's also good for earaches."
   },
   {
     path: "assets/images/Czech Republic.jpg",
@@ -301,8 +327,8 @@ const countries = [
     name: "Czech Republic",
     direction: "West",
     capital: "Prague",
-    population: "",
-    funFact: ""
+    population: "10.700.000",
+    funFact: "Czechs consume the most beer per capita in the world. "
   },
   {
     path: "assets/images/Germany.jpg",
@@ -311,8 +337,9 @@ const countries = [
     name: "Germany",
     direction: "North-West",
     capital: "Berlin",
-    population: "",
-    funFact: ""
+    population: "83.700.000",
+    funFact:
+      "The longest German word published is - now please read it carefully: Donaudampfschifffahrtselektrizitätenhauptbetriebswerkbauunterbeamtengesellschaft."
   },
   {
     path: "assets/images/Latvia.jpg",
@@ -321,8 +348,9 @@ const countries = [
     name: "Latvia",
     direction: "North-East",
     capital: "Riga",
-    population: "",
-    funFact: ""
+    population: "1.900.000",
+    funFact:
+      "There is a very special hotel in Latvia. With 'be a prisoner for one day’ the Karosta 'Prison Hotel' advertises and treats its guests in the same way. Before you enter the cell you sign that you agree to be treated like a prisoner."
   },
   {
     path: "assets/images/Netherlands.jpg",
@@ -331,8 +359,9 @@ const countries = [
     name: "Netherlands",
     direction: "North-West",
     capital: "Amsterdam",
-    population: "",
-    funFact: ""
+    population: "17.100.000",
+    funFact:
+      "20 percent of the entire Netherlands is under water and another 20 percent below sea level."
   },
   {
     path: "assets/images/Slovakia.jpg",
@@ -341,8 +370,9 @@ const countries = [
     name: "Slovakia",
     direction: "West",
     capital: "Bratislava",
-    population: "",
-    funFact: ""
+    population: "5.400.000",
+    funFact:
+      "More than 6,000 caves have been discovered in Slovakia so far! Most spectacular caves can be found in the national parks of Low Tatras, Slovak Paradise and Slovak Karst."
   },
   {
     path: "assets/images/United Kingdom.jpg",
@@ -357,8 +387,9 @@ const countries = [
     name: "United Kingdom",
     direction: "North-West",
     capital: "London",
-    population: "",
-    funFact: ""
+    population: "67.700.000",
+    funFact:
+      " In London's 'Café Ziferblat' the food and drinks are on the house. Guests pay for the time they spend there: About 2.20 euros for an hour. Beside coffee and tea as also some simple little things as toast and pastries, also the things brought along can be consumed"
   },
   {
     path: "assets/images/Belgium.jpg",
@@ -367,8 +398,9 @@ const countries = [
     name: "Belgium",
     direction: "West",
     capital: "Brussels",
-    population: "",
-    funFact: ""
+    population: "11.500.000",
+    funFact:
+      "Antwerp the diamond capital of the world has been a major focus of the diamond trade since the 15th century, and today, 84% of the world’s rough diamonds pass through Antwerp to be polished and shaped before hitting the stores."
   },
   {
     path: "assets/images/Denmark.jpg",
@@ -377,8 +409,8 @@ const countries = [
     name: "Denmark",
     direction: "North",
     capital: "Copenhagen",
-    population: "",
-    funFact: ""
+    population: "5.700.000",
+    funFact: "There are 18 different shark species living in the Danish waters"
   },
   {
     path: "assets/images/Greece.jpg",
@@ -387,8 +419,9 @@ const countries = [
     name: "Greece",
     direction: "South-East",
     capital: "Athens",
-    population: "",
-    funFact: ""
+    population: "10.400.000",
+    funFact:
+      "Greeks are superstitious: If you get a compliment, you think the 'evil eye' is looking at you. To ward it off, one spits three times (supposedly at the one being congratulated). Thanks!"
   },
   {
     path: "assets/images/Lithuana.jpg",
@@ -397,8 +430,9 @@ const countries = [
     name: "Lithuana",
     direction: "North-East",
     capital: "Vilnius",
-    population: "",
-    funFact: ""
+    population: "1.900.000",
+    funFact:
+      "Vilnius has an anonymous swing foundation. It’s a group of people who install swings all around the city, often changing their locations."
   },
   {
     path: "assets/images/Norway.jpg",
@@ -407,8 +441,9 @@ const countries = [
     name: "Norway",
     direction: "North",
     capital: "Oslo",
-    population: "",
-    funFact: ""
+    population: "5.400.000",
+    funFact:
+      "Norwegians invented skiing some 4000 years ago. They have won more medals in the Winter Olympics than any other country, with 332 to date since the first Winter Olympic Games were held in 1924."
   },
   {
     path: "assets/images/Slovenia.jpg",
@@ -417,7 +452,8 @@ const countries = [
     name: "Slovenia",
     direction: "South",
     capital: "Ljubljana",
-    population: "",
-    funFact: ""
+    population: "2.000.000",
+    funFact:
+      "Planica is an epic place for ski-lovers, especially if you like heights. The Ski Jump here is legendary and many world records have been set here. For example, the world record by Bjoern Einar Romoeren of 239 meters."
   }
 ];
