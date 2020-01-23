@@ -47,7 +47,7 @@ function finalResult() {
         </h1>
 
         <div class="end">
-          <p>Play often and join the Country Club</p>
+          <p>Play often and get better</p>
           <div class="final-image">
           </div>
         </div>
@@ -57,7 +57,7 @@ function finalResult() {
         <div class="footer-results">
           <p>
             Made by
-            <a href="https://www.linkedin.com/in/konstantindauer/">
+            <a href="https://www.linkedin.com/in/konstantindauer/" target="_blank">
               Konstantin Dauer
             </a>
             during Ironhack Bootcamp January 2020
@@ -141,6 +141,8 @@ function showNxtBtn() {
 function clickNext() {
   renderGame();
   displayCountry();
+  document.getElementById("input-field").disabled = false;
+  document.getElementById("input-field").focus();
   infoBox.style.display = "none";
   document.querySelector(".image-europe-box").style.display = "none";
   nxtBtn.style.display = "none";
@@ -158,6 +160,7 @@ function checkCountry(userInput) {
     status.score += 100;
     displaySolution();
     hintDirection.style.display = "none";
+    document.getElementById("input-field").disabled = true; // disable input field
     displayInfoBox();
     showNxtBtn();
     if (status.roundsCount >= 10) {
@@ -182,6 +185,7 @@ function checkCountry(userInput) {
       displaySolution();
       displayInfoBox();
       hintDirection.style.display = "none";
+      document.getElementById("input-field").disabled = true; // diable input-field
       showNxtBtn();
       status.roundsCount += 1;
       if (status.roundsCount >= 10) {
