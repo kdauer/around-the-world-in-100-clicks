@@ -18,6 +18,7 @@ let nxtBtn = document.querySelector(".next-btn");
 // declare info-box
 let infoBox = document.querySelector(".country-info");
 
+// render everything
 function renderGame() {
   CalculateScore();
   CalculateGuessesLeft();
@@ -158,6 +159,7 @@ function checkCountry(userInput) {
     // answer is right
     rightAnswer();
     status.score += 100;
+    CalculateScore();
     displaySolution();
     hintDirection.style.display = "none";
     document.getElementById("input-field").disabled = true; // disable input field
@@ -173,12 +175,14 @@ function checkCountry(userInput) {
       return;
     }
     status.roundsCount += 1;
+    CalculateRounds();
     document.getElementById("input-field").value = "";
     status.guessesLeft = guesses;
   } else {
     // answer is wrong
     if (status.guessesLeft <= 1) {
       // and no guesses left
+      CalculateGuessesLeft();
       console.log("less than 1 guess left", status.guessesLeft);
       hintDirection.style.display = "none";
       displayRightName();
@@ -188,6 +192,7 @@ function checkCountry(userInput) {
       document.getElementById("input-field").disabled = true; // diable input-field
       showNxtBtn();
       status.roundsCount += 1;
+      CalculateRounds();
       if (status.roundsCount >= 10) {
         // and also after last round
         displaySolution();
@@ -202,6 +207,7 @@ function checkCountry(userInput) {
       return;
     }
     status.guessesLeft -= 1;
+    CalculateGuessesLeft();
     wrongAnswer();
     if (status.guessesLeft == 2) {
       // get the second hint

@@ -236,12 +236,12 @@ h1 {
 }
 
 .instruction {
+  color: rgb(86, 140, 247);
   display: flex;
   justify-content: center;
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin: 0;
   padding: 0;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .input {
