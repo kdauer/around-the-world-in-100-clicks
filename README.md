@@ -1,4 +1,4 @@
-A Country Quiz game
+around the world in 100 clicks - a Quiz game
 
 the way you play
 

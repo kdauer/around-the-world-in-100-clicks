@@ -18,13 +18,6 @@ let nxtBtn = document.querySelector(".next-btn");
 // declare info-box
 let infoBox = document.querySelector(".country-info");
 
-// render everything
-function renderGame() {
-  CalculateScore();
-  CalculateGuessesLeft();
-  CalculateRounds();
-}
-
 // render the score
 function CalculateScore() {
   document.querySelector("#score").innerText = status.score;
@@ -37,6 +30,12 @@ function CalculateGuessesLeft() {
 // render the rounds
 function CalculateRounds() {
   document.querySelector("#round span").innerText = status.roundsCount;
+}
+// render everything
+function renderGame() {
+  CalculateScore();
+  CalculateGuessesLeft();
+  CalculateRounds();
 }
 
 // deploy the result page
@@ -132,13 +131,13 @@ function displayInfoBox() {
   infoBox.style.display = "block";
 }
 
-// show the next button
+// show the "Next Round" button
 function showNxtBtn() {
   nxtBtn.classList.add("animated", "fadeIn");
   nxtBtn.style.display = "block";
 }
 
-// click next button
+// click "Next Round" button
 function clickNext() {
   renderGame();
   displayCountry();
