@@ -457,3 +457,7 @@ const countries = [
       "Planica is an epic place for ski-lovers, especially if you like heights. The Ski Jump here is legendary and many world records have been set here. For example, the world record by Bjoern Einar Romoeren of 239 meters."
   }
 ];
+
+wrongTags = ["Not Exactly", "Nope", "Try again", "sorry, but no", "False"];
+
+rightTags = ["Yeah", "Awesome", "Correct", "Great", "True"];

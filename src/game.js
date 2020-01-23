@@ -74,14 +74,13 @@ function finalResult() {
 // show message for the wrong answer
 function wrongAnswer() {
   messageBox.style.color = "red";
-  messageBox.innerHTML = "Not Exactly";
+  messageBox.innerHTML = randomizeWrongTag();
   messageBox.style.display = "block";
   messageBox.classList.add("animated", "wobble", "slow");
   setTimeout(function() {
     messageBox.classList.remove("animated", "wobble", "slow");
     messageBox.style.display = "none";
   }, 2000);
-  console.log("user input does not match");
 }
 
 //give second hint after one wrong guess
@@ -95,7 +94,7 @@ function secondHint() {
 // show message for the right answer
 function rightAnswer() {
   messageBox.style.color = "green";
-  messageBox.innerHTML = "Awesome";
+  messageBox.innerHTML = randomizeRightTag();
   messageBox.style.display = "block";
   messageBox.classList.add("animated", "heartBeat", "slow");
   setTimeout(function() {

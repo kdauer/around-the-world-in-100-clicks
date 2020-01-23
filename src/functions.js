@@ -22,5 +22,17 @@ function setCountryHint() {
   document.querySelector(".hint p span").innerText = chosenCountry.name.length;
 }
 
+function randomizeWrongTag() {
+  let random = Math.floor(Math.random() * wrongTags.length);
+  let randomWrongTag = wrongTags[random];
+  return randomWrongTag;
+}
+
+function randomizeRightTag() {
+  let random = Math.floor(Math.random() * rightTags.length);
+  let randomrightTag = rightTags[random];
+  return randomrightTag;
+}
+
 // display first country when starting
 displayCountry();
