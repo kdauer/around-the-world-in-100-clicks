@@ -15,6 +15,7 @@ There are 10 rounds so try to get the maximum of 1000 points!
 behind the scenes
 
 The game is build with JavaScript DOM Manipulation. There a images of the countries and images of the location in europe.
+The Fonts are "Dosis" and "Banger"
 There are also css animations from https://daneden.github.io/animate.css/
 
 tripping
