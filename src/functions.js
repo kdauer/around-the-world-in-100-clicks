@@ -17,11 +17,10 @@ function displayCountry() {
   setCountryHint();
 }
 
-//get the hint
+//display the hint
 function setCountryHint() {
   document.querySelector(".hint p span").innerText = chosenCountry.name.length;
 }
 
+// display first country when starting
 displayCountry();
-
-//get only ten countries

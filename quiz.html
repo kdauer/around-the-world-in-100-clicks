@@ -19,7 +19,16 @@
         <p>Round:</p>
         <p id="round"><span>1</span>&nbsp;out of 10</p>
       </div>
-      <p id="title">What country is behind this shape?</p>
+      <div>
+        <p id="title">What country is behind this shape?</p>
+        <p class="description">
+          You can guess 3 times <br />then you will be presented with the
+          solution
+          <br />
+          and you will move on to the next round
+        </p>
+      </div>
+
       <div class="box">
         <p>Guesses</p>
         <p id="guesses"><span>3</span>/ &nbsp;3</p>
@@ -31,15 +40,17 @@
     </div>
 
     <div class="game-container">
-      <div class="image-europe-box animated fadeIn duration-1s">
-        <img id="europe" src="#" alt="" />
-      </div>
-      <!--- displays the country on a map of europe --->
       <div class="img-border">
         <img src="#" alt="" />
       </div>
+      <!--- displays the country on a map of europe --->
+      <div class="image-europe-box animated fadeIn duration-1s">
+        <img id="europe" src="#" alt="" />
+      </div>
       <!--- message if right or wrong --->
       <div class="message-box"></div>
+      <!--- hint for direction after first guess wrong --->
+      <div class="direction-hint"></div>
     </div>
     <div class="instruction">
       <p>type your guess and press "Enter" to check</p>

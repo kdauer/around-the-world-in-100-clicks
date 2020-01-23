@@ -93,6 +93,15 @@ h1 {
 
 #title {
   font-size: 2rem;
+  margin: 0.25rem;
+}
+
+.description {
+  margin: 0.25rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
 }
 
 .header p > a {
@@ -101,28 +110,6 @@ h1 {
   justify-content: flex-start;
   padding-left: 0;
   text-decoration: none;
-}
-
-.message-box {
-  font-family: "Bangers", "cursive";
-  font-size: 5rem;
-  display: none;
-  position: fixed;
-  padding: 2rem;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.image-europe-box {
-  width: 750px;
-  height: 750px;
-  display: none;
-  position: absolute;
-}
-
-#europe {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
 }
 
 .box {
@@ -138,7 +125,6 @@ h1 {
   flex-direction: row;
   justify-content: space-around;
 }
-
 #round,
 #guesses,
 #score {
@@ -152,6 +138,28 @@ h1 {
   margin: 1rem;
 }
 
+.image-europe-box {
+  width: 750px;
+  height: 750px;
+  display: none;
+  position: absolute;
+}
+
+#europe {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.message-box {
+  font-family: "Bangers", "cursive";
+  font-size: 5rem;
+  display: none;
+  position: fixed;
+  padding: 2rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 .img-border {
   display: flex;
   justify-content: center;
@@ -160,6 +168,7 @@ h1 {
   border: 3px solid #000000;
   border-radius: 10px;
   background-color: rgb(251, 251, 251);
+  opacity: 0.95;
 }
 
 .img-border img {
@@ -169,6 +178,20 @@ h1 {
   object-fit: contain;
   width: 100%;
   padding: 0.5rem;
+  opacity: 0.95;
+}
+
+.direction-hint {
+  font-size: 2rem;
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 100px;
+  box-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .instruction {
@@ -189,6 +212,7 @@ h1 {
 #input-field {
   font-size: 2rem;
   border: 1px solid #000000;
+  box-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .hint {

@@ -1,13 +1,17 @@
+// declare rounds and guesses
 let rounds = 1;
 let guesses = 3;
 
+// declare status of the game
 let status = {
   score: 0,
   guessesLeft: guesses,
   roundsCount: rounds
 };
 
+// declare the messagebox
 let messageBox = document.querySelector(".message-box");
+let hintDirection = document.querySelector(".direction-hint");
 
 function renderGame() {
   CalculateScore();
@@ -15,18 +19,22 @@ function renderGame() {
   CalculateRounds();
 }
 
+// render the score
 function CalculateScore() {
   document.querySelector("#score").innerText = status.score;
 }
-
+// render the guesses
 function CalculateGuessesLeft() {
   document.querySelector("#guesses span").innerText = status.guessesLeft;
 }
+
+// render the rounds
 function CalculateRounds() {
   document.querySelector("#round span").innerText = status.roundsCount;
 }
+
+// deploy the result page
 function finalResult() {
-  // <body class="start">
   const results = `
       <div class="container">
         <h1>
@@ -52,13 +60,13 @@ function finalResult() {
         </div>
       </div>
       `;
-
   const resultNode = document.createElement("div");
   resultNode.innerHTML = results;
   document.querySelector(".game-site").replaceWith(resultNode);
   document.querySelector("#final-score").innerText = status.score;
 }
 
+// show message for the wrong answer
 function wrongAnswer() {
   messageBox.style.color = "red";
   messageBox.innerHTML = "Not Exactly";
@@ -71,6 +79,15 @@ function wrongAnswer() {
   console.log("user input does not match");
 }
 
+//give second hint after one wrong guess
+function secondHint() {
+  hintDirection.classList.add("animated", "fadeIn", "slow");
+  hintDirection.innerHTML =
+    "it's more in the direction of " + chosenCountry.direction;
+  hintDirection.style.display = "block";
+}
+
+// show message for the right answer
 function rightAnswer() {
   messageBox.style.color = "green";
   messageBox.innerHTML = "Awesome";
@@ -82,6 +99,7 @@ function rightAnswer() {
   }, 2000);
 }
 
+// show the right name of the country
 function displayRightName() {
   messageBox.classList.add("animated", "tada");
   messageBox.style.color = "blue";
@@ -93,6 +111,7 @@ function displayRightName() {
   }, 2000);
 }
 
+// show the image on map of europe
 function displaySolution() {
   document.querySelector("#europe").src = chosenCountry.solution;
   let europeBox = document.querySelector(".image-europe-box");
@@ -102,19 +121,18 @@ function displaySolution() {
   }, 3000);
 }
 
+// check if input matches the country
 function checkCountry(userInput) {
   let countryAnswer = chosenCountry.answers.map(function(element) {
     return element.toLowerCase();
   });
   if (countryAnswer.includes(userInput)) {
+    // answer is right
     rightAnswer();
     status.score += 100;
     displaySolution();
     if (status.roundsCount >= 10) {
-      //   messageBox.style.display = "block";
-      //   setTimeout(function() {
-      //     messageBox.style.display = "none";
-      //   }, 500);
+      // after last round
       displaySolution();
       setTimeout(function() {
         finalResult();
@@ -129,12 +147,19 @@ function checkCountry(userInput) {
     CalculateRounds();
     displayCountry();
   } else {
+    // answer is wrong
+    // if (status.guessesLeft == 2) {
+    //   secondHint();
+    //   return;
+    // }
     if (status.guessesLeft <= 1) {
+      // and no guesses left
       console.log("less than 1 guess left", status.guessesLeft);
       displayRightName();
       displaySolution();
       status.roundsCount += 1;
       if (status.roundsCount >= 10) {
+        // and also after last round
         displaySolution();
         setTimeout(function() {
           finalResult();
@@ -153,7 +178,6 @@ function checkCountry(userInput) {
     CalculateGuessesLeft();
     document.getElementById("input-field").value = "";
   }
-  console.log(userInput);
 }
 
 // press enter for input
