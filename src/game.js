@@ -139,6 +139,7 @@ function showNxtBtn() {
 
 // click "Next Round" button
 function clickNext() {
+  displayCountry();
   renderGame();
   document.getElementById("input-field").disabled = false;
   document.getElementById("input-field").focus();
@@ -156,14 +157,13 @@ function checkCountry(userInput) {
   if (countryAnswer.includes(userInput)) {
     // answer is right
     rightAnswer();
+    displaySolution();
     status.score += 100;
     CalculateScore();
-    displaySolution();
     hintDirection.style.display = "none";
     document.getElementById("input-field").disabled = true; // disable input field
     displayInfoBox();
     showNxtBtn();
-    displayCountry();
     if (status.roundsCount >= 10) {
       // after last round
       displaySolution();
@@ -181,15 +181,14 @@ function checkCountry(userInput) {
     // answer is wrong
     if (status.guessesLeft <= 1) {
       // and no guesses left
+      displaySolution();
+      displayRightName();
       CalculateGuessesLeft();
       hintDirection.style.display = "none";
-      displayRightName();
-      displaySolution();
       displayInfoBox();
       hintDirection.style.display = "none";
       document.getElementById("input-field").disabled = true; // diable input-field
       showNxtBtn();
-      displayCountry();
       status.roundsCount += 1;
       CalculateRounds();
       if (status.roundsCount >= 10) {
