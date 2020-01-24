@@ -139,7 +139,6 @@ function showNxtBtn() {
 
 // click "Next Round" button
 function clickNext() {
-  displayCountry();
   renderGame();
   document.getElementById("input-field").disabled = false;
   document.getElementById("input-field").focus();
@@ -164,6 +163,7 @@ function checkCountry(userInput) {
     document.getElementById("input-field").disabled = true; // disable input field
     displayInfoBox();
     showNxtBtn();
+    displayCountry();
     if (status.roundsCount >= 10) {
       // after last round
       displaySolution();
@@ -189,6 +189,7 @@ function checkCountry(userInput) {
       hintDirection.style.display = "none";
       document.getElementById("input-field").disabled = true; // diable input-field
       showNxtBtn();
+      displayCountry();
       status.roundsCount += 1;
       CalculateRounds();
       if (status.roundsCount >= 10) {
