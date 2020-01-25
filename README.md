@@ -21,3 +21,5 @@ There are also css animations from https://daneden.github.io/animate.css/
 tripping
 
 The most challenging part was the main function of the game that checks if the user input is the same as the name of the country.
+
+play the game here: https://konstantindauer.github.io/around-the-world-in-100-clicks/
